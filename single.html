@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Resume-Templates</title>
+</head>
+<body>
+    <body class="bg-light">
+        <div class="container p-5">
+            <div class="row">
+                <div class="col-lg-4 bg-dark  text-white py-4">
+                    <div class="header-left">
+                        <img src="" class="img-thumbnail rounded circle mb-5">
+                        <h1 class="display-5" id="name"></h1>
+                        <h4 class="lead text-uppercase text-white-50 mb-4">Software Developer</h4>
+                    </div>
+    
+                <div>
+                     <h5 class="text-uppercase bg-white text-dark py-2 rounded-pill">Contact</h5>
+                     <ul class="list-unstyled text-white-50 ml-5 py-2 text-left">
+                        <li class="list-item">
+                            <i class="fas fa-mobile-alt mx-4" id ="mobile" ></i>
+                            
+                        </li>
+                        <li class="list-item">
+                            <i class="fas fa-envelope-open-text mx-4" id="email"></i>
+                            
+                        </li>
+                        <li class="list-item">
+                            <i class="fas fa-blog mx-4" id="address"></i>
+                              
+                        </li>
+                      
+                     </ul>
+    
+                </div>
+            <div>
+                <h5 class="text-uppercase bg-white text-dark py-2 rounded-pill" >Skills</h5>
+                <ul class="list text-white-50 ml-5 py-2 text-left  text-capitalize" id="triger_skil">
+                    <li class="list-item" id="skill"></li>
+                    <li class="list-item"></li>
+                    <li class="list-item"></li>
+                </ul>
+             </div>
+
+             <div>
+                <h5 class="text-uppercase bg-white text-dark py-2 rounded-pill" >Language Known</h5>
+                <ul class="list text-white-50 ml-5 py-2 text-left  text-capitalize" id="triger_lan">
+                    <li class="list-item" id="skill"></li>
+                    <li class="list-item"></li>
+                    <li class="list-item"></li>
+                </ul>
+             </div>
+    
+             <div>
+                <h5 class="text-uppercase bg-white text-dark py-2 rounded-pill">Education</h5>
+                <ul class="list text-white-50 ml-5 py-2 text-left  text-capitalize">
+                    <li class="list-item"></li>
+                    <li class="list-item"></li>
+                    <li class="list-item"></li>
+                </ul>
+             </div>
+
+             <div>
+                <h5 class="text-uppercase bg-white text-dark py-2 rounded-pill">personal_details</h5>
+                <!-- f<p id="Fathers_Name">F</p> -->
+                <ul class="list text-white-50 ml-5 py-2 text-left  text-capitalize">
+                    <li class="list-item" id="Fathers_Name">Father:</li> 
+                    <li class="list-item" id="dob">Date of Birth:</li>
+                    <li class="list-item" id="gender"></li>
+                    <li class="list-item" id="single">marital_status:</li>
+                </ul>
+             </div>
+            
+    
+            </div>
+    
+            <div class="col-lg-8 bg-light text-dark py-4 px-5">
+                  <div class="header-right">
+                       <h4 class="text-uppercase">Objective</h4>
+                       <hr>
+                       <p id="objective"></p>
+                    
+                  </div>
+                      
+                 <div>
+                    <h4 class="text-uppercase" >work_experience</h4>
+                    <hr>
+                    <ul class="list" id="p_id">
+                        <li class="list-item">
+                            <h5 class="display-2text-uppercase" id="">Team-le</h5>
+                            <h5 class="text-uppercase text-black-50">B2c technologies/2023-2022</h5>
+                            <p>Led a team of  non-voice BPO professionals, providing guidance, coaching, and performance feedback to drive excellence.</p>
+                        
+                        </li>
+                        <li class="list-item">
+                            <h5 class="display-2text-uppercase">Process-Associate</h5>
+                            <h5 class="text-uppercase text-black-50">B2c technologies/2022-2020</h5>
+                            <p>Process Associates often handle data entry tasks, which involve inputting information into databases, spreadsheets, or other software systems. They may also process and analyze data to generate reports or perform specific tasks related to data management.</p>
+                            
+                        </li>
+                    </ul>
+                 </div>
+                 <button class="btn btn-dark" type="button" id="download" onclick="download_resume()">Download</button>
+                 <!-- <div>
+                    <h4 class="text-uppercase">Project Details</h4>
+                    <hr>
+                    <ul class="list">
+                        <li class="list-item">
+                            <h5 class="display-2text-uppercase">Log in form app</h5>
+                            <p>We create a basic HTML structure for the login form and include Bootstrap for styling</p>
+                            <p>The JavaScript code listens for the form submission event, prevents the default form submission, and validates the username and password. You should replace "yourusername" and "yourpassword" with the actual credentials you want to check against.</p>
+                        </li>
+                        <li class="list-item">
+                            <h5 class="display-2text-uppercase">Resume</h5>
+                            <p>We create a simple resume layout using Bootstrap for styling and responsiveness.</p>
+                            <p>The resume includes sections for your name, job title, summary, work experience, education, skills, and contact information.</p>
+                        </li>
+                    </ul>
+                 </div> -->
+            </div>
+        </div>
+    </div>
+        
+
+   
+</body>
+<script src="resumebuil.js" type="text/Javascript"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script>
+    //  get_resume(a);
+    var id = getUrlParameter('id');
+    //  alert(id)
+     get_resume(id)
+</script>
+</html>

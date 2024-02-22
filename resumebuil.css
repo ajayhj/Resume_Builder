@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding: 0;
+
+}
+
+.topleft{
+    display: inline-block;
+    height:10%;
+    
+}
+
+.topright{
+    display:inline-block;
+    height: 0%;
+}
+
+.first{
+    height: 10%;
+}
+
+.layout{
+    /* background-image: url("blue.jpg"); */
+    height: 100%;
+    width:100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+}
+.homepage_display{
+    background-image: url("re.jpeg");
+    height: 100%;
+    width:100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="resumebuil.css">
+  </head>
+
+  <body>
+    <form>
+      <div class="container bg-secondary">
+        <div class="layout">
+        <h1 class="bg-succ text-dark text-center fw-bolder">RESUME BUILDER</h1>
+        <div class="row">
+          <div class="topleft col-6">
+            <div class="first">
+            <h3 class="bg-light text-dark text-center fw-normal">About</h3>
+            <!-- <div class="row"> -->
+
+            <!-- <div  style="display: flex;"> -->
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter name"
+                onkeyup="parsedata(this)">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter email"
+                onkeyup="parsedata(this)">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Mobile number</label>
+              <input type="number" class="form-control" id="mobile" name="mobile" placeholder="Enter your mobile number"
+                onkeyup="parsedata(this)">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Address</label>
+              <input type="text" class="form-control" id="address" name="address" placeholder="Enter your address"
+                onkeyup="parsedata(this)">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Objective</label>
+              <input type="text" class="form-control" id="Objective" name="objective" onkeyup="parsedata(this)">
+            </div>
+            </div>
+            <!-- </div> -->
+          </div>
+        
+          <div class="topright col-6">
+            <h3 class="bg-light text-dark text-center fw-normal">Personal Details</h3>
+            <!-- <div style="display: flex;"> -->
+            <div class="mb-3 ">
+              <label for="exampleFormControlInput1" class="form-label">Fathers_Name</label>
+              <input type="text" class="form-control" id="name" name="Fathers_Name" placeholder="Enter  name"
+                onkeyup="parsedata(this,'personal_details')">
+            </div>
+
+            <div class="mb-3 ">
+              <label for="exampleFormControlInput1" class="form-label">Date of Birth</label>
+              <input type="text" class="form-control" id="dob" name="Date_of_birth" placeholder="DOB"
+                onkeyup="parsedata(this,'personal_details')">
+            </div>
+            <div class="mb-3 ">
+              <label for="exampleFormControlInput1" class="form-label">Gender</label>
+              <input type="text" class="form-control" id="gender" name="Gender" placeholder="Gender"
+                onkeyup="parsedata(this,'personal_details')">
+            </div>
+            <div class="mb-3 ">
+              <label for="exampleFormControlInput1" class="form-label">Marital Status</label>
+              <input type="text" class="form-control" id="marital_status" name="marital_status"
+                onkeyup="parsedata(this,'personal_details')">
+            </div>
+            <div class="mb-3 ">
+              <label for="exampleFormControlInput1" class="form-label">Natinoality</label>
+              <input type="text" class="form-control" id="marital_status" name="marital_status"
+                onkeyup="parsedata(this,'personal_details')">
+            </div>
+          </div>
+        
+        <!-- </div>   -->
+        <div class="row">
+        <div class="middleleft col-6">
+        <h3 class="bg-light text-dark text-center fw-normal">Skills</h3>
+
+        <!-- <div class="mb-3 row"> -->
+          <div class="col-6">
+            <input type="text" class="form-control " id="skill_id" name="skills"
+              placeholder="Please Enter your Skills to Add">
+          </div>
+          <div class="col-3">
+
+            <div>
+              <ol id="skill_list">
+
+              </ol>
+
+              <button type="button" class="btn btn-dark" onclick="add('skills','skill_id','skill_list')">+</button>
+            </div>
+
+          </div>
+        </div>
+        <div class="middleleft col-6">
+          <h3 class="bg-light text-dark text-center text-center fw-normal">Language Known</h3>
+          <!-- <div class="mb-3 row"> -->
+            <div class="col-6">
+              <input type="text" id="lan_name" class="form-control" placeholder="Please Enter Your Language to Add">
+            </div>
+
+            <div class="col-3">
+              <div>
+                <ol id="Language_list"></ol>
+                <button type="button" class=" btn btn-dark"
+                  onclick="add('Language','lan_name','Language_list')">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-6"> -->
+            <h3 class="bg-light text-dark fw-normal text-center">Educational Qualification</h3>
+             <div class="edu" style="display: flex;">
+              <div class="mb-3 row "> 
+
+                <div class="col-auto">
+                  <label class="form-label">Institute name:</label>
+                  <input type="text" class="form-control" name="institute_name" id="institute_name"
+                    placeholder="Institute Name" onkeyup="getmuldata(this)">
+                </div>
+                <div class="col-auto">
+                  <label class="form-label">Level:</label>
+                  <input type="text" class="form-control" name="level" id="level" placeholder="level"
+                    onkeyup="getmuldata(this)">
+                </div>
+                <div class="col-auto">
+                  <label class="form-label">Year:</label>
+                  <input type="number" class="form-control" name="year" id="year" placeholder="year"
+                    onkeyup="getmuldata(this)">
+                </div>
+                <div class="col-auto">
+                  <label class="form-label">Percentage</label>
+                  <input type="number" class="form-control" name="precentage" id="precentage" placeholder="percentage"
+                    onkeyup="getmuldata(this)">
+                </div>
+                <div class="col-auto">
+                  <div>
+                    <table class="table table-dark table-striped ">
+                      <thead>
+                        <tr>
+                          <th>Institute Name</th>
+                          <th>Level</th>
+                          <th>Year</th>
+                          <th>Percentage</th>
+                          <th>Delete</th>
+                        </tr>
+                      </thead>
+                      <tbody id="list_muldatas">
+
+                      </tbody>
+                    </table>
+                    <!-- <ol id="education_list"></ol> -->
+                    <button type="button" class="btn btn-dark"
+                      onclick="add_edudata('list_muldatas','education')">+</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+        <!-- </div> -->
+         <!-- <div class="col-6"> -->
+            <h3 class="bg-light text-dark fw-normal text-center">Work Experience</h3>
+             <div class="edu" style="display: flex;">
+              <div class="mb-3 row "> 
+
+                <div class="col-auto">
+                  <label class="form-label">Campany:</label>
+                  <input type="text" class="form-control" id="campany_name" name="campany_name" placeholder="Campany Name"
+                    onkeyup="getmuldata(this)">
+                </div>
+                <div class="col-auto">
+                  <label class="form-label">Level:</label>
+                  <input type="text" class="form-control" id="role" name="role" placeholder="Role"
+                    onkeyup="getmuldata(this)">
+                </div>
+                <div class="col-auto">
+                  <label class="form-label">Experience year:</label>
+                  <input type="date" class="form-control" id="experience_year" name="experience_year"
+                    placeholder="Enter your experience" onkeyup="getmuldata(this)">
+                </div>
+                <div class="col-auto">
+                  <label class="form-label">Project Details:</label>
+                  <input type="text" class="form-control" id="Project_work" name="Project_work"
+                    placeholder="Working projects" onkeyup="getmuldata(this)">
+                </div>
+                <div class="col-auto">
+                  <div>
+                    <table class="table table-dark table-striped ">
+                      <thead>
+                        <tr>
+                          <th>Campany Name</th>
+                          <th>Level</th>
+                          <th>Experience Year</th>
+                          <th>Project details</th>
+                          <th>Delete</th>
+                        </tr>
+                      </thead>
+                      <tbody id="list_muldatas">
+
+                      </tbody>
+                    </table>
+
+                    <button type="button" class="btn btn-dark"
+                      onclick="add_edudata('work_experience_list','work_experience')">+</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+         <!-- </div> -->
+     
+    </form>
+
+    </div>
+    </div>
+  <!-- </div > -->
+    <div class="row text-center d-grid gap-2">
+      <div class="mb-3 alert alert-secondary">
+        <code> <pre id="display"></pre></code>
+        <button type="button" class=" btn btn-dark btn-lg " onclick="save()">Save</button>
+        <!-- <button type="button" class=" btn btn-primary" onclick="getdata()">getdata</button> -->
+        <!-- <button type="button" class=" btn btn-danger" onclick="deleted()">deleted</button> -->
+      </div>
+
+    </div>
+
+  </body>
+  <script src="resumebuil.js" type="text/Javascript"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
+
+</html>

@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        :root {
+  --bg-clr: #6b7fba;
+  --white: #fff;
+  --rleft-bg: #9ab3eb;
+  --rright-bg: #8096d0;
+  --primary-text-clr: #525252;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background: var(--bg-clr);
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--primary-text-clr);
+  padding: 0 20px;
+}
+
+h2 {
+  font-family: "Calligraffitti", cursive;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.resume {
+  width: 800px;
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  margin: 50px auto;
+  background: var(--white);
+}
+
+.resume .resume_left {
+  width: 270px;
+}
+
+.resume .resume_right {
+  background: var(--rright-bg);
+  width: calc(800px - 270px);
+}
+
+.resume_left .r_profile_pic,
+.resume_right .r_namerole {
+  width: 100%;
+  height: 260px;
+  padding: 35px;
+}
+
+.resume_left .r_profile_pic {
+  background: var(--rleft-bg);
+}
+
+.resume_left .r_profile_pic img {
+  width: 100%;
+}
+
+.resume_left .r_left_sub {
+  padding: 35px;
+}
+
+.resume_left .r_left_sub > div:not(:last-child),
+.resume_right .r_right_sub > div:not(:last-child) {
+  margin-bottom: 35px;
+}
+
+.resume_left .r_aboutme p {
+  text-align: center;
+}
+
+.resume_left .r_skills ul li,
+.resume_left .r_skills ul li p:first-child,
+.resume_left .r_hobbies ul li p:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.resume_left .r_skills ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.resume_left .r_skills ul li p:first-child,
+.resume_left .r_hobbies ul li p:first-child {
+  width: 45px;
+  height: 45px;
+  background: var(--rleft-bg);
+  margin-right: 15px;
+  border-radius: 50%;
+  justify-content: center;
+  font-size: 14px;
+  color: var(--white);
+}
+
+.resume_left .r_hobbies ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.resume_left .r_hobbies ul li {
+  margin-bottom: 10px;
+}
+
+.resume_left .r_hobbies ul li p:hover {
+  background: var(--rright-bg);
+}
+
+.resume_right .r_namerole p {
+  font-family: "Calligraffitti", cursive;
+  font-size: 60px;
+  line-height: 80px;
+  text-align: center;
+}
+
+.resume_right .r_namerole p:last-child {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--white);
+}
+
+.resume_right .r_info {
+  padding: 35px;
+  background: var(--white);
+}
+
+.resume_right .r_info ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.resume_right .r_info p {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.resume_right .r_right_sub {
+  padding: 35px;
+  padding-bottom: 0;
+}
+
+.resume_right .r_right_sub p {
+  color: var(--white);
+}
+
+.resume_right .r_right_sub ul li {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.resume_right .r_right_sub ul li div:first-child {
+  width: 25%;
+  margin-right: 15px;
+}
+
+.resume_right .r_right_sub ul li div:last-child {
+  width: 75%;
+}
+
+.resume_right .r_right_sub p:first-child {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+    </style>
+</head>
+<body>
+    <section class="resume">
+        <div class="resume_left">
+            <div class="r_profile_pic">
+              <img src="https://i.imgur.com/x3omKbe.png" alt="profile_pic">
+            </div>
+            <div class="r_left_sub">
+              <div class="r_aboutme">
+                <h2>About me</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa earum optio id iure reprehenderit accusamus quisquam accusantium nulla? Dolorum ipsa sed perspiciatis nemo aliquam quibusdam, alias quae totam nulla nihil.</p>
+              </div>
+              <div class="r_skills">
+                <h2>Skills</h2>
+                <ul>
+                  <li>
+                    <p><i class="fa-solid fa-code"></i></p>
+                    <p>Web Development</p>
+                  </li>
+                  <li>
+                    <p><i class="fa-solid fa-pen-nib"></i></p>
+                    <p>Web Designing</p>
+                  </li>
+                  <li>
+                    <p><i class="fa-solid fa-video"></i></p>
+                    <p>Video Editing</p>
+                  </li>
+                  <li>
+                    <p><i class="fa-solid fa-headphones"></i></p>
+                    <p>Sound Mixing</p>
+                  </li>
+                  <li>
+                    <p><i class="fa-solid fa-image"></i></p>
+                    <p>Photoshop Editing</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="r_hobbies">
+                <h2>Hobbies</h2>
+                <ul>
+                  <li>
+                    <p><i class="fa-solid fa-football"></i></p>
+                  </li>
+                  <li>
+                    <p><i class="fa-solid fa-plant-wilt"></i></p>
+                  </li>
+                  <li>
+                    <p><i class="fa-solid fa-book"></i></p>
+                  </li>
+                  <li>
+                    <p><i class="fa-solid fa-bicycle"></i></p>
+                  </li>
+                  <li>
+                    <p><i class="fa-solid fa-chess"></i></p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+        <div class="resume_right">
+            <div class="r_namerole">
+              <p>Alexander</p>
+              <p>Wood</p>
+              <p class="role">Web Developer</p>
+            </div>
+            <div class="r_info">
+              <ul>
+                <li>
+                  <p>alexwood@gmail.com</p>
+                </li>
+                <li>
+                  <p>+15 120 5677684</p>
+                </li>
+              </ul>
+            </div>
+            <div class="r_right_sub">
+              <div class="r_education">
+                <h2>Education</h2>
+                <ul>
+                  <li>
+                    <div class="r_ed_left">
+                      <p>2010-2013</p>
+                    </div>
+                    <div class="r_ed_right">
+                      <p>Web Masters College</p>
+                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa earum optio id iure reprehenderit</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="r_ed_left">
+                      <p>2013-2017</p>
+                    </div>
+                    <div class="r_ed_right">
+                      <p>Web Designing College</p>
+                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa earum optio id iure reprehenderit</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="r_ed_left">
+                      <p>2017-2018</p>
+                    </div>
+                    <div class="r_ed_right">
+                      <p>Video Designing College</p>
+                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa earum optio id iure reprehenderit</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="r_jobs">
+                <h2>Work Experience</h2>
+                <ul>
+                  <li>
+                    <div class="r_ed_left">
+                      <p>2015-2017</p>
+                    </div>
+                    <div class="r_ed_right">
+                      <p>Google</p>
+                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa earum optio id iure reprehenderit</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="r_ed_left">
+                      <p>2017-2019</p>
+                    </div>
+                    <div class="r_ed_right">
+                      <p>Facebook</p>
+                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa earum optio id iure reprehenderit</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="r_ed_left">
+                      <p>2019-2022</p>
+                    </div>
+                    <div class="r_ed_right">
+                      <p>Instagram</p>
+                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa earum optio id iure reprehenderit</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+    </section>
+    
+    </body>
+    <script>
+        const queryString = window.location.search;
+           const getparam=new URLSearchParams(queryString);
+           let id=getparam.get('id')
+           console.log('user id',id)
+         
+        </script>
+        <script src="js/main.js" type="text/javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+            <script>
+                 $(document).ready(function(){getbyid(id)})
+            </script>
+        
+        </html>            

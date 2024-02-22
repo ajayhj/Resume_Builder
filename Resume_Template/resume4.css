@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.headercolor{
+    background-color:#515761;
+    color:white;
+     /* padding: 2%;  */
+    padding-left:30px;
+    /* padding:30px;  */
+
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+}
+.container{
+    margin-top: 5%;
+}
+img{
+    width: 100%;
+    margin-bottom: 2%;
+   
+}
+/* h5{
+    color: #515761;
+} */
+

@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+ 
+        .name{
+     display: inline-block; 
+}
+.value{
+     display: inline-block; 
+    margin-left: 2%;
+}
+h2{
+    background-color: orange;
+    color: white;
+
+}
+/* .bend{
+    position: relative;
+}
+h2::after{
+    transform: rotate(56deg);
+    z-index: -1;
+    top: 26px;
+    left: 191px;
+    content: '';
+    width: 21px;
+    position: absolute;
+    background-color: aqua;
+} */
+
+img{
+    width: 100px;
+    margin-left: 30%;
+    margin-bottom: 10px;
+}
+.first_sec{
+    width: 35%;
+    /* display: inline-block; */
+    background-color: black;
+    color: white;
+    margin-left: 2%;
+    margin-bottom: 2%;
+
+}
+.second_sec{
+    
+    margin-left: 3%;
+    width: 50%;
+    vertical-align: top;
+    /* margin-top: -17px; */
+}
+h1{
+    margin-left: 25%;
+}
+.full{
+    display: flex;
+}
+p,li{
+    margin-left: 30px;
+}
+.email{
+        display: flex;
+        margin-left: 30px;
+      }
+    .left{
+        margin-left: 5px;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="full">
+        <div class="first_sec">
+        
+            <h1 id="name"></h1>        
+            <img src="images/photonew (2).jpg" alt="photo">     
+            <h2>Contact</h2>    
+            <div class="email"><i class="material-icons">email</i><p class="left" id="email"></p></div>
+            <div class="email"><i class="material-icons">phone</i><p class="left" id="phone"></p></div>
+            <div class="email"><i class="material-icons">location_on</i><p class="left" id="address"></p> </div>
+           
+            <h2>Personal Details</h2>
+    <div class="Personal">
+
+    <div class="name">
+        <p>Date of Birth</p>
+        <p>Marital</p>
+        <p>Gender</p>
+        <p>Father's Name</p>
+        
+    </div>
+    <div class="value">
+        <p id="dateOfBirth"></p>
+        <p id="martial"></p>
+        <p id="gender"> </p>
+        <p id="father"></p>
+    </div>
+    </div>
+    <h2 class="bend">Skills</h2>
+    <p id="skills"></p>
+  
+    <h2>Languages Known</h2>
+    <p id="languages"></p>
+
+    <h2>Hobbies</h2>
+    <p id="hobbies"></p>
+    <h2>Strengths</h2>
+     <p id="strengths"></p>
+    
+   
+    
+
+    </div>
+    <div class="second_sec">
+       
+   
+       
+
+    <h2>Education</h2>
+    
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Year</th>
+            <th scope="col">Institute</th>
+            <th scope="col">Level</th>
+            <th scope="col">Precentage</th> 
+          </tr>
+        </thead>
+        <tbody id="edu_list"> 
+        </tbody>
+      </table>
+  
+
+   <h2>Work Experience</h2>
+          <hr color="blue">
+          <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Company</th>
+                  <th scope="col">Position</th>
+                  <th scope="col">Duration</th>
+                 
+                </tr>
+              </thead>
+              <tbody id="workex_list"> 
+              </tbody>
+            </table>
+            <h2>Achivements & Awards</h2>
+       <p id="achivements"></p>
+    <h2>Objectives</h2>
+    <p id="objective"></p>
+   <h2>Co-Carricular Activities</h2>
+   <p id="activities"></p>
+ 
+    
+  
+    <h2>Declaration</h2>
+    <p id="declaration"></p>
+    <input type="button" value="download" onclick="download()">
+    </div>
+    </div>
+</body>
+    <script>
+        const queryString = window.location.search;
+           const getparam=new URLSearchParams(queryString);
+           let id=getparam.get('id')
+           console.log('user id',id)
+         
+        </script>
+        <script src="js/main.js" type="text/javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+            <script>
+                 $(document).ready(function(){getbyid(id)})
+            </script>
+        
+        </html>    

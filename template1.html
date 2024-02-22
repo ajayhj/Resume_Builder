@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+      *{
+        margin: 0.4%;
+        padding: 0%;
+      }
+      .email{
+        display: flex;
+      }
+      .phone{
+        display: flex;
+      }
+      .address{
+        display: flex;
+      }
+
+.details{
+    background-color: black;
+    color:rgb(83, 219, 243);
+    padding: 1%;
+    padding-left: 2%;
+    border-radius: 10px;
+}
+.year{
+    display: inline-block;
+    vertical-align: top;
+}
+.school{
+    display: inline-block;
+    margin-left: 16%;
+}
+.name{
+    display: inline-block;
+}
+.value{
+    display: inline-block;
+    margin-left: 2%;
+}
+h2{
+    color: blue;
+}
+img{
+    width: 14%;
+    margin-left: 80%;
+    margin-top: -15.8%;
+    padding: 8px;
+    border-radius: 50%;
+    height: 20%;
+    border: 3px solid rgb(83, 219, 243);
+}
+hr{
+  color: blue;
+  height: 4px;
+}
+    </style>
+   
+  </head>
+  <body>
+    <div id="test">
+        <div class="details">
+           
+            <h1 id="name" ></h1>              
+            <div class="email"><i class="material-icons">email</i><p id="email"></p></div>
+            <div class="phone"><i class="material-icons">phone</i><p id="phone"></p></div>
+            <div class="address"><i class="material-icons">location_on</i><p id="address"></p> </div>
+           
+            <img src="images/photonew (2).jpg" alt="photo">
+         
+            </div>
+            
+        <label><h2>Objectives</h2></label>
+        <hr color="blue">
+        <p id="objective"></p>
+        <label for=""><h2>Education</h2></label>
+        <hr color="blue">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Year</th>
+                <th scope="col">Institute</th>
+                <th scope="col">Level</th>
+                <th scope="col">Precentage</th> 
+              </tr>
+            </thead>
+            <tbody id="edu_list"> 
+            </tbody>
+          </table>
+
+          <label for=""><h2>Work Experience</h2></label>
+          <hr color="blue">
+          <table class="table">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Company</th>
+                  <th scope="col">Position</th>
+                  <th scope="col">Duration</th>
+                 
+                </tr>
+              </thead>
+              <tbody id="workex_list"> 
+              </tbody>
+            </table>
+        
+        <h2>Skills</h2>
+        <hr color="blue">
+         <p id="skills"></p>
+         <h2>Languages Known</h2>
+        <hr color="blue">
+         <p id="languages"></p>
+
+         <h2>Hobbies</h2>
+         <hr color="blue">
+          <p id="hobbies"></p>
+          <h2>Strengths</h2>
+          <hr color="blue">
+           <p id="strengths"></p>
+         
+           <h2>Achivements & Awards</h2>
+           <hr color="blue">
+            <p id="achivements"></p>
+         
+
+           <h2>Co-Carricular Activities</h2>
+           <hr color="blue">
+            <p id="activities"></p>
+         
+      
+        <h2>Personal Details</h2>
+        <hr color="blue">
+        <div class="name">
+            <p>Date of Birth</p>
+            <p>Marital</p>
+            <p>Gender</p>
+            <p>Father's Name</p> 
+        </div>
+        <div class="value">
+            <p id="dateOfBirth"></p>
+            <p id="martial"></p>
+            <p id="gender"> </p>
+            <p id="father"></p>
+        
+        </div>
+        <h2>Declaration</h2>
+        <hr color="blue">
+        <p id="declaration"></p>
+        <input type="button" value="download" onclick="download()">
+    </div>
+  </body>
+<script>
+
+
+
+const queryString = window.location.search;
+   const getparam=new URLSearchParams(queryString);
+   let id=getparam.get('id')
+   console.log('user id',id)
+ 
+</script>
+<script src="js/main.js" type="text/javascript"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+         $(document).ready(function(){getbyid(id)})
+    </script>
+
+</html>
